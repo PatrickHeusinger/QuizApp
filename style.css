@@ -1,0 +1,207 @@
+body {
+    margin: 0;
+    overflow-y: hidden;
+}
+
+.d-none {
+    display: none;
+}
+
+h1 {
+    color: black !important;
+}
+
+.playButton {
+    margin-top: 30px;
+}
+
+.start {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+}
+
+.rightContent {
+    position: absolute;
+    right: 0;
+    color: black;
+    background-color: rgb(247, 247, 247);
+    text-align: center;
+    width: 70%;
+    height: 100vh;
+    z-index: 1;
+}
+
+.rightContent h1 {
+    margin-top: 100px;
+    padding: 50px;
+}
+
+.rightContent h3 {
+    margin-top: 50px;
+}
+
+.leftContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    background-color: rgb(9, 89, 144);
+    height: 100vh;
+    width: 30%;
+}
+
+.leftContent button {
+    font-size: 40px;
+    margin-top: 100px;
+    color: rgb(9, 89, 144);
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.leftContent button:hover {
+    color: black;
+    cursor: pointer;
+    background-color: white;
+    border-left: 20px solid black;
+    border-right: 20px solid black;
+}
+
+.leftContent img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-top: 80px;
+}
+
+.navbar,
+.bg-light {
+    background-color: white !important;
+}
+
+.cube {
+    position: relative;
+    color: white !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: white;
+    /*rgb(9, 89, 144)!important;*/
+    z-index: 1;
+}
+
+.btn {
+    background-color: rgb(9, 89, 144) !important;
+}
+
+.btn:hover {
+    opacity: 80%;
+}
+
+.quizCard {
+    width: 70%;
+    color: black;
+    z-index: 9;
+    border: none !important
+}
+
+.questionFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.quiz-answer:hover {
+    cursor: pointer;
+    background-color: rgb(9, 89, 144, 0.2);
+}
+
+.bg-success,
+.bg-danger {
+    color: white;
+}
+
+.gameOverBody {
+    text-align: center;
+    cursor: pointer;
+}
+
+.progress {
+    margin: 5px;
+}
+
+.centerButton {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.offcanvas {
+    width: 150px !important;
+    background-color: rgb(9, 89, 144) !important;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: rgb(178, 173, 173) !important;
+}
+
+.navbar-toggler {
+    margin: 10px 10px 0 0;
+}
+
+.card-body {
+    position: relative;
+}
+
+.shield {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
+}
+
+@media(max-width:1200px) {
+    /*   .quizCard {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        z-index: 9999;
+        padding-bottom: 220px;
+        border: none !important;
+    }*/
+    .quizCard {
+        width: 90%;
+    }
+    .cube {
+        height: 100vh;
+        background-color: white !important;
+    }
+    .gameOverBody {
+        height: 58vh;
+    }
+    .card-img-top {
+        border-radius: 0 !important;
+        height: 300px !important;
+        object-fit: cover;
+    }
+    .rightContent {
+        display: none;
+    }
+    .leftContent {
+        width: 100%;
+    }
+}

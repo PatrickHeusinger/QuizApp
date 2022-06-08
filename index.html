@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QuizApp</title>
+    <link rel="icon" href="img/physics1.webp">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="script.js"></script>
+</head>
+
+<body onload="includeHTML(); newGameStart()">
+    <div w3-include-html="templates/navbar.html"></div>
+
+    <div id="hidden" class="hiddenDiv"></div>
+    <div id="gameCube" class="cube">
+
+        <div class="card quizCard">
+            <!-- <img src="img/quiz.jpg" class="card-img-top" alt="...">-->
+            <div class="progress">
+                <div id="calculator" class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%"></div>
+            </div>
+            <div class="card-body gameOverBody" id="gameOver" style="display:none;">
+
+                <span>GAME OVER</span>
+
+                <span><b id="true">xxx</b>&nbspof&nbsp<b id="false">xxx</b>&nbspanswers right !</span>
+                <div class="centerButton">
+                    <button onclick="reload()" class="btn btn-primary">Try Again</button>
+                </div>
+
+            </div>
+
+            <div id="remove" class="cover">
+                <div class="card-body" id="cardBody">
+                    <div id="shield"></div>
+                    <h5 class="card-title" id="question">Question</h5>
+                    <div class="card quiz-answer mb-2">
+                        <div class="card-body" id="answer_1" onclick="answer('answer_1')">
+                            Answer
+                        </div>
+                    </div>
+                    <div class="card quiz-answer mb-2">
+                        <div class="card-body" id="answer_2" onclick="answer('answer_2')">
+                            Answer
+                        </div>
+                    </div>
+                    <div class="card quiz-answer mb-2">
+                        <div class="card-body" id="answer_3" onclick="answer('answer_3')">
+                            Answer
+                        </div>
+                    </div>
+                    <div class="card quiz-answer mb-2">
+                        <div class="card-body" id="answer_4" onclick="answer('answer_4')">
+                            Answer
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="questionFooter">
+                    <span>
+                        <b id="counter">1</b>&nbspvon&nbsp<b id="allQuest">5</b>&nbspQuestions
+                    </span>
+
+                    <button onclick="nextQuestion()" class="btn btn-primary" id="next" disabled>Next Question</button>
+                </div>
+
+
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+
+</html>
